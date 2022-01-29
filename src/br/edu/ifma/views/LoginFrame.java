@@ -40,8 +40,6 @@ public final class LoginFrame extends JFrame implements ActionListener {
     }
  
     public void setLocationAndSize() {
-        setLocationRelativeTo(null);
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
         setBounds(10, 10, 370, 600);
         setResizable(false);
         userLabel.setBounds(50, 150, 100, 30);
@@ -73,8 +71,7 @@ public final class LoginFrame extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == loginButton) {
-            String userText;
-            String pwdText;
+            String userText, pwdText;
             userText = userTextField.getText();
             pwdText = passwordField.getText();
             if (userText.equalsIgnoreCase("") && pwdText.equalsIgnoreCase("")) {
