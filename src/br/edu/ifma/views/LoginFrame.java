@@ -3,6 +3,7 @@ package br.edu.ifma.views;
 import java.awt.Container;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JFrame;
@@ -18,6 +19,7 @@ import javax.swing.JTextField;
 public final class LoginFrame extends JFrame implements ActionListener {
     Menu ex = new Menu();
     
+    JLabel label = new JLabel(new javax.swing.ImageIcon(getClass().getResource("/br/edu/ifma/image/sale.png")));
     Container container = getContentPane();
     JLabel userLabel = new JLabel("USUARIO");
     JLabel passwordLabel = new JLabel("SENHA");
@@ -40,18 +42,20 @@ public final class LoginFrame extends JFrame implements ActionListener {
     }
  
     public void setLocationAndSize() {
-        setBounds(10, 10, 370, 600);
+        setSize(370, 750);
         setResizable(false);
-        userLabel.setBounds(50, 150, 100, 30);
-        passwordLabel.setBounds(50, 220, 100, 30);
-        userTextField.setBounds(150, 150, 150, 30);
-        passwordField.setBounds(150, 220, 150, 30);
-        showPassword.setBounds(150, 250, 150, 30);
-        loginButton.setBounds(50, 300, 100, 30);
-        resetButton.setBounds(200, 300, 100, 30);
+        label.setBounds(130, 50, 120, 120);
+        userLabel.setBounds(50, 230, 100, 30);
+        passwordLabel.setBounds(50, 300, 100, 30);
+        userTextField.setBounds(150, 230, 150, 30);
+        passwordField.setBounds(150, 300, 150, 30);
+        showPassword.setBounds(150, 330, 150, 30);
+        loginButton.setBounds(50, 380, 100, 30);
+        resetButton.setBounds(200, 380, 100, 30);
     }
  
     public void addComponentsToContainer() {
+        container.add(label);
         container.add(userLabel);
         container.add(passwordLabel);
         container.add(userTextField);
