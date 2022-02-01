@@ -8,10 +8,11 @@ import static javax.swing.JFrame.EXIT_ON_CLOSE;
  * @author lucas
  */
 public class Login{
-    public static void main(String[] a) {
+    public static void main(String[] args) {
         LoginFrame frame = new LoginFrame();
         frame.setVisible(true);
         frame.setLocationRelativeTo(null);
         frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
+    
 }

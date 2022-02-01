@@ -66,13 +66,19 @@ public final class Menu extends JFrame implements ActionListener{
         if(e.getSource() == Cprod) {
             NewJFrame f = new NewJFrame();
         }
-        if(e.getSource() == Aprod) {    
+        if(e.getSource() == Aprod) {
+             //this.dispose();
+             setVisible(false);
+            //Atualizacao atualizacao = new Atualizacao();
+            Atualizacao2 atualizacao2 = new Atualizacao2();
+            atualizacao2.setVisible(true);
         }
         if(e.getSource() == Eprod) { 
         }
         if(e.getSource() == Vest) {
         }
-        if(e.getSource() == Lest) {  
+        if(e.getSource() == Lest) {
+           
         }
     }
 }
