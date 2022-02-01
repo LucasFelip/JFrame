@@ -19,6 +19,8 @@ public final class Menu extends JFrame implements ActionListener{
     JMenuItem Vest = new JMenuItem("VISUALIZAR");
     JMenuItem Lest = new JMenuItem("ATUALIZAR");
     JMenuItem Eest = new JMenuItem("EXCLUIR");
+    JMenu Sobre = new JMenu("SOBRE");
+    JMenuItem Asobre = new JMenuItem("ALUNOS");
     JMenu Exit = new JMenu("FECHAR");
     JMenuItem Vexit = new JMenuItem("VOLTAR");
     JMenuItem Fexit = new JMenuItem("ENCERRAR");
@@ -31,7 +33,7 @@ public final class Menu extends JFrame implements ActionListener{
     
     public void setLocationAndSize() {
         setTitle("Sistema de Vendas");
-        setSize(850, 600);
+        setSize(370, 550);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setResizable(false);
@@ -43,10 +45,12 @@ public final class Menu extends JFrame implements ActionListener{
         est.add(Vest);
         est.add(Lest);
         est.add(Eest);
+        Sobre.add(Asobre);
         Exit.add(Vexit);
         Exit.add(Fexit);
         menubar.add(prod);
         menubar.add(est);
+        menubar.add(Sobre);
         menubar.add(Exit);
         setJMenuBar(menubar);
     }
@@ -59,6 +63,7 @@ public final class Menu extends JFrame implements ActionListener{
         Lest.addActionListener(this);
         Vexit.addActionListener(this);
         Fexit.addActionListener(this);
+        Asobre.addActionListener(this);
     }
     
     @Override
@@ -74,11 +79,13 @@ public final class Menu extends JFrame implements ActionListener{
             System.exit(0);
         }
         if(e.getSource() == Cprod) {
-            NewJFrame f = new NewJFrame();
+            setVisible(false);
+            CadastrarProd CadastrarProd = new CadastrarProd();
+            CadastrarProd.setVisible(true);
         }
         if(e.getSource() == Aprod) {
             setVisible(false);
-            Atualizacao2 atualizacao2 = new Atualizacao2();
+            AtualizarProd atualizacao2 = new AtualizarProd();
             atualizacao2.setVisible(true);
         }
         if(e.getSource() == Eest) { 
@@ -88,6 +95,9 @@ public final class Menu extends JFrame implements ActionListener{
         }
         if(e.getSource() == Lest) {  
             JOptionPane.showMessageDialog(this, "Estoque atualizado");
+        }
+        if(e.getSource() == Asobre){
+            JOptionPane.showMessageDialog(this, "Alunos: \n  - Lucas Felipe \n  - Wesley Versart \n  - Tadeu Viegas");
         }
     }
 }
