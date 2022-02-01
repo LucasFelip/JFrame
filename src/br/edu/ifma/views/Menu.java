@@ -74,7 +74,9 @@ public final class Menu extends JFrame implements ActionListener{
             System.exit(0);
         }
         if(e.getSource() == Cprod) {
-            NewJFrame f = new NewJFrame();
+            setVisible(false);
+            CadastrarProd CadastrarProd = new CadastrarProd();
+            CadastrarProd.setVisible(true);
         }
         if(e.getSource() == Aprod) {
             setVisible(false);
