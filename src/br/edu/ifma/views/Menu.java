@@ -76,7 +76,10 @@ public final class Menu extends JFrame implements ActionListener{
         if(e.getSource() == Cprod) {
             NewJFrame f = new NewJFrame();
         }
-        if(e.getSource() == Aprod) {    
+        if(e.getSource() == Aprod) {
+            setVisible(false);
+            Atualizacao2 atualizacao2 = new Atualizacao2();
+            atualizacao2.setVisible(true);
         }
         if(e.getSource() == Eest) { 
             JOptionPane.showMessageDialog(this, "Estoque excluido");
