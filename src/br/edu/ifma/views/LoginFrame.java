@@ -1,4 +1,4 @@
-package Views;
+package br.edu.ifma.views;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -8,7 +8,7 @@ import javax.swing.*;
 public class LoginFrame extends JFrame implements ActionListener {
     
     Container container = getContentPane();
-    JLabel label = new JLabel(new javax.swing.ImageIcon(getClass().getResource("/image/sale.png")));
+    JLabel label = new JLabel(new javax.swing.ImageIcon(getClass().getResource("/br/edu/ifma/image/sale.png")));
     JLabel userLabel = new JLabel("USUARIO");
     JLabel passwordLabel = new JLabel("SENHA");
     JTextField userTextField = new JTextField();
