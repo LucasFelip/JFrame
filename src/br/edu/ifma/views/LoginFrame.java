@@ -1,26 +1,14 @@
-package br.edu.ifma.views;
+package Views;
 
-import java.awt.Container;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JCheckBox;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import javax.swing.JPasswordField;
-import javax.swing.JTextField;
+import javax.swing.*;
 
-/**
- *
- * @author lucas
- */
-public final class LoginFrame extends JFrame implements ActionListener {
-    Menu ex = new Menu();
+public class LoginFrame extends JFrame implements ActionListener {
     
-    JLabel label = new JLabel(new javax.swing.ImageIcon(getClass().getResource("/br/edu/ifma/image/sale.png")));
     Container container = getContentPane();
+    JLabel label = new JLabel(new javax.swing.ImageIcon(getClass().getResource("/image/sale.png")));
     JLabel userLabel = new JLabel("USUARIO");
     JLabel passwordLabel = new JLabel("SENHA");
     JTextField userTextField = new JTextField();
@@ -28,15 +16,14 @@ public final class LoginFrame extends JFrame implements ActionListener {
     JButton loginButton = new JButton("ENTRAR");
     JButton resetButton = new JButton("LIMPAR");
     JCheckBox showPassword = new JCheckBox("Mostrar senha");
- 
- 
+    
     public LoginFrame() {
         setLayoutManager();
         setLocationAndSize();
         addComponentsToContainer();
         addActionEvent();
     }
- 
+    
     public void setLayoutManager() {
         container.setLayout(null);  
     }
@@ -81,7 +68,7 @@ public final class LoginFrame extends JFrame implements ActionListener {
             if (userText.equalsIgnoreCase("") && pwdText.equalsIgnoreCase("")) {
                 JOptionPane.showMessageDialog(this, "Login com sucesso!!");
                 setVisible(false);
-                ex.setVisible(true);
+                new MenuFrame().setVisible(true);
             } else {
                 JOptionPane.showMessageDialog(this, "Usuário ou senha inválido");
             }
@@ -99,4 +86,3 @@ public final class LoginFrame extends JFrame implements ActionListener {
         }
     }
 }
-
