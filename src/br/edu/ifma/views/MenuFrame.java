@@ -11,7 +11,7 @@ public class MenuFrame extends javax.swing.JFrame {
 
     public MenuFrame() {
         initComponents();
-        this.setSize(500,500);
+        this.setSize(650,550);
         this.setResizable(false);
            
     }
@@ -28,6 +28,7 @@ public class MenuFrame extends javax.swing.JFrame {
         jMenuItem2 = new javax.swing.JMenuItem();
         jMenuItem3 = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
+        jMenuItem4 = new javax.swing.JMenuItem();
         jMenu5 = new javax.swing.JMenu();
         jMenu4 = new javax.swing.JMenu();
         jMenu6 = new javax.swing.JMenu();
@@ -48,11 +49,11 @@ public class MenuFrame extends javax.swing.JFrame {
         contane.setLayout(contaneLayout);
         contaneLayout.setHorizontalGroup(
             contaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 600, Short.MAX_VALUE)
+            .addGap(0, 625, Short.MAX_VALUE)
         );
         contaneLayout.setVerticalGroup(
             contaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 350, Short.MAX_VALUE)
+            .addGap(0, 395, Short.MAX_VALUE)
         );
 
         jMenuBar1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
@@ -79,6 +80,11 @@ public class MenuFrame extends javax.swing.JFrame {
 
         jMenu3.setText("Estoque");
         jMenu3.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+
+        jMenuItem4.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jMenuItem4.setText("Vender");
+        jMenu3.add(jMenuItem4);
+
         jMenuBar1.add(jMenu3);
 
         jMenu5.setText("Funcionario");
@@ -99,11 +105,13 @@ public class MenuFrame extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(contane, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(contane, javax.swing.GroupLayout.DEFAULT_SIZE, 625, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(contane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(contane, javax.swing.GroupLayout.PREFERRED_SIZE, 395, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -111,7 +119,7 @@ public class MenuFrame extends javax.swing.JFrame {
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
         CadastrarPanel panel = new CadastrarPanel();
-        panel.setSize(485, 352);
+        panel.setSize(495, 390);
         panel.setLocation(0, 0);
         contane.removeAll();
         contane.add(panel, BorderLayout.CENTER);
@@ -131,6 +139,7 @@ public class MenuFrame extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jMenuItem4;
     // End of variables declaration//GEN-END:variables
 
 

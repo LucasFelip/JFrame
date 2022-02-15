@@ -2,6 +2,11 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/D:/Workspace/Netbeans/JFrame/src/br/edu/ifma/views/LoginFrame.java</file>
+            <file>file:/D:/Workspace/Netbeans/JFrame/src/br/edu/ifma/views/CadastrarPanel.java</file>
+            <file>file:/D:/Workspace/Netbeans/JFrame/src/br/edu/ifma/views/AtualizarPanel.java</file>
+            <file>file:/D:/Workspace/Netbeans/JFrame/src/br/edu/ifma/views/MenuFrame.java</file>
+        </group>
     </open-files>
 </project-private>

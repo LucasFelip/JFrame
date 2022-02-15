@@ -3,9 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.com.edu.ifma.principal;
+package br.edu.ifma.principal;
 
-import Views.LoginFrame;
+import br.edu.ifma.views.LoginFrame;
+
+
 
 /**
  *
